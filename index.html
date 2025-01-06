@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>휴대폰 화면 왼쪽, 오른쪽 레이아웃</title>
+  
+  <!-- index.js 파일 연결 -->
+  <script src="index.js" defer></script>
+
+  <!-- index.css 파일 연결 -->
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    Test Page
+  <div class="top">Hyundai</div>
+  <div class="left">
+    <div class="phone">
+      <div class="phone-screen">
+        <h2 style="text-align:center; color: #333;">휴대폰 화면</h2>
+        <div class="apple-button">
+          <div class="apple-icon"></div> <!-- 애플 버튼 -->
+        </div>
+        <ul class="click-list">
+          <li class="click-item" id="item1">항목 1</li>
+          <li class="click-item" id="item2">항목 2</li>
+          <li class="click-item" id="item3">항목 3</li>
+          <li class="click-item" id="item4">항목 4</li>
+        </ul>
+      </div>
+      <div class="phone-button"></div> <!-- 하단 버튼 -->
+    </div>
+  </div>
+  <div class="right">
+    <h2 id="rightContent">오른쪽 화면</h2>
+  </div>
 </body>
 </html>
