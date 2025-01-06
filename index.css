@@ -1,113 +1,134 @@
-/* 기본 스타일 설정 */
-body {
+/* 기본 설정 */
+body, html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* 전체 컨테이너 */
+  .container {
     display: flex;
-    height: 100vh;
-}
-
-.left {
-    flex: 1; /* 왼쪽 영역 */
+    flex-direction: column;
+    height: 100vh; /* 전체 화면 높이를 채움 */
+  }
+  
+  /* 상단 영역 */
+  .top {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: lightblue;
-}
-
-.phone {
-    width: 400px; /* 휴대폰 너비 확대 */
-    height: 800px; /* 휴대폰 높이 확대 */
-    background-color: #333; /* 휴대폰 배경색 */
-    border-radius: 30px; /* 모서리 둥글게 */
+    background-color: #616161;
+    color: white;
+    padding: 10px 20px;
+    flex: 0 0 10%; /* 상단 영역 높이 */
+  }
+  
+  .top img {
+    width: 150px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .top ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
-}
-
-.phone-screen {
-    width: 320px; /* 화면 크기 확대 */
-    height: 680px; /* 화면 크기 확대 */
-    background-color: white; /* 화면 배경색 */
-    border-radius: 20px;
-    padding: 20px;
-    overflow-y: auto; /* 내용이 많을 때 스크롤 가능 */
-}
-
-.apple-button {
-    width: 50px; /* 애플 버튼 크기 */
-    height: 50px;
-    background-color: white; /* 버튼 배경을 하얀색으로 */
-    border-radius: 50%; /* 원형 버튼 */
-    position: absolute;
-    bottom: 60px; /* 화면 상단 */
-    left: 50%; /* 가운데 정렬 */
-    transform: translateX(-50%); /* 정확한 가운데 정렬 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 그림자 추가 */
-    cursor: pointer; /* 클릭 가능 표시 */
-}
-
-.apple-icon {
-    width: 25px; /* 아이콘 크기 */
-    height: 25px;
-    background-color: #333; /* 아이콘 색상을 어두운 색으로 설정 */
-    border-radius: 50%; /* 원형 아이콘 */
-}
-
-.click-list {
-    list-style-type: none; /* 기본 목록 스타일 제거 */
+    gap: 10px;
+    list-style: none;
+    margin: 0;
     padding: 0;
-}
-
-.click-item {
-    background-color: #f1f1f1;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+  }
+  
+  .top ul li {
     cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s;
-}
-
-.click-item:hover {
-    background-color: #ddd; /* 호버 시 배경 색상 변경 */
-}
-
-.phone-button {
-    width: 60px; /* 하단 버튼 크기 확대 */
-    height: 12px;
-    background-color: #555;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.911);
+    color: #007acc;
     border-radius: 5px;
-    position: absolute;
-    bottom: 20px;
-}
-
-.right {
-    flex: 3; /* 오른쪽 영역 */
-    background-color: rgb(90, 86, 86);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .top ul li:hover {
+    background-color: #005f99;
+    color: white;
+  }
+  
+  /* 중앙 영역 */
+  .container > .content {
+    display: flex;
+    flex: 1; /* 남은 공간을 채움 */
+  }
+  
+  /* 왼쪽 영역 */
+  .left {
+    background-color: #f0f0f0;
+    flex: 1; /* 동일한 비율로 공간 나누기 */
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  /* 오른쪽 영역 */
+  .right {
+    background-color: #e0e0e0;
+    flex: 2; /* 오른쪽을 더 크게 할당 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  /* 하단 영역 */
+  .bottom {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    flex: 0 0 10%; /* 하단 영역 높이 */
+  }
 
-#rightContent {
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-}
+s
 
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column; /* 화면이 좁아지면 세로로 나누기 */
-    }
 
-    .left, .right {
-        width: 100%;
-        height: 50vh; /* 세로로 나누기 위해 높이 설정 */
-    }
-}
+
+
+
+
+
+
+    /* 기본 설정 */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+      }
+  
+      /* bottom 영역 스타일 */
+      .bottom {
+        background-color: #333;
+        color: white;
+        padding: 30px;
+        display: flex;
+        flex-direction: column; /* 세로로 쌓이도록 설정 */
+        align-items: flex-end; /* 오른쪽 정렬 */
+        gap: 10px; /* 항목 간 간격 */
+      }
+  
+      /* 각 항목의 label 설정 */
+      .bottom div {
+        display: flex;
+        justify-content: flex-start; /* 텍스트 왼쪽 정렬 */
+        width: 300px; /* 고정 너비 설정 */
+      }
+  
+      /* 왼쪽 텍스트는 고정 너비로, 오른쪽 텍스트는 흐름에 맞게 배치 */
+      .bottom div span:first-child {
+        width: 100px; /* 고정된 너비 */
+        font-weight: bold; /* 텍스트 강조 */
+      }
+  
