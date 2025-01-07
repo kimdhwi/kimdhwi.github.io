@@ -1,64 +1,51 @@
-/* 기본 설정 */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  height: 100%;
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
-}
-
-/* 슬라이더 설정 */
-.slider {
-  position: relative;
-  text-align: center;
-  width: 100%;
-  max-width: 300px; /* 최대 너비 설정 */
-  height: 100px; /* 슬라이드 영역 높이 설정 */
-  overflow: hidden; /* 슬라이드 범위 밖으로 나가지 않도록 설정 */
-}
-
-/* 텍스트 설정 */
-h2 {
-  font-size: 2rem;
+  height: 100vh;
   margin: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 120px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.text {
   position: absolute;
-  opacity: 0; /* 처음에는 보이지 않음 */
-  transform: translateY(20px); /* 아래에서 올라오는 효과 */
-  animation: slide-up 4s infinite ease-in-out; /* 애니메이션 설정 */
-  white-space: nowrap; /* 텍스트가 줄 바꿈되지 않게 설정 */
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.8);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  line-height: 120px;
+  letter-spacing: 1.5px;
 }
 
-h2:nth-child(1) {
-  animation-delay: 0s; /* 첫 번째 텍스트는 바로 시작 */
+.hidden {
+  opacity: 0;
 }
 
-h2:nth-child(2) {
-  animation-delay: 2s; /* 두 번째 텍스트는 2초 후에 시작 */
+.slide-up {
+  transform: translateY(-100%);
+  opacity: 0;
 }
 
-/* 애니메이션 정의 */
-@keyframes slide-up {
-  0% {
-    opacity: 0;
-    transform: translateY(20px); /* 아래에서 시작 */
-  }
-  25% {
-    opacity: 1;
-    transform: translateY(0); /* 제자리로 올라가며 보이게 */
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0); /* 제자리에서 유지 */
-  }
-  75% {
-    opacity: 0;
-    transform: translateY(-20px); /* 위로 올라가며 사라짐 */
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-20px); /* 사라짐 */
-  }
+.slide-down {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.active {
+  transform: translateY(0);
+  opacity: 1;
 }
