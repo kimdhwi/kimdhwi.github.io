@@ -49,10 +49,6 @@ body, html {
   color: rgb(116, 116, 116);
 }
 
-.top ul li:hover {
-  background-color: #494849;
-}
-
 /* 중앙 영역 */
 .content {
   display: flex;
@@ -72,7 +68,7 @@ body, html {
   justify-content: center;
   align-items: center;
   background-color: #f9f9f9;
-  padding: 10px;
+  padding: 10px 30px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -83,7 +79,7 @@ body, html {
 }
 
 .arrow-button, .order-button {
-  background-color: #1d72b8;
+  background-color: #56a5e6;
   color: white;
   font-size: 1rem;
   padding: 12px 20px;
@@ -96,7 +92,7 @@ body, html {
 }
 
 .arrow-button:hover, .order-button:hover {
-  background-color: #155d8c;
+  background-color: #0196fa;
   transform: translateY(-3px);
 }
 
@@ -107,6 +103,7 @@ body, html {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  
 }
 
 .slider {
@@ -184,27 +181,31 @@ body, html {
   }
 }
 
+
+
+/* 텍스트 애니메이션 */
 .container1 {
   position: relative;
   width: 300px;
-  height: 120px;
+  height: 100px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+ 
 }
 
 .text {
   position: absolute;
   width: 100%;
-  text-align: center;
+  text-align: left;
   font-size: 28px;
   font-weight: bold;
-  color: white;
+  color: rgb(108, 105, 255);
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.8);
   transition: transform 0.5s ease, opacity 0.5s ease;
   line-height: 120px;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
+}
+.h2 {
+  color: #696869;
 }
 
 .hidden {
@@ -224,4 +225,38 @@ body, html {
 .active {
   transform: translateY(0);
   opacity: 1;
+}
+
+
+.slide-ba {
+  position: relative;
+  width: 800px; /* 이미지 너비 */
+  height: 50px; /* 이미지 높이 */
+  overflow: hidden; /* 컨테이너 밖으로 넘치는 이미지 숨김 */
+  background-color: #f0f0f0; /* 배경 색상 (옵션) */
+}
+
+.sliding-image {
+  position: absolute;
+  top: 0;
+  left: -100%; /* 이미지가 컨테이너의 왼쪽 밖에서 시작 */
+  width: 120px; /* 이미지 너비 */
+  height: 50px; /* 이미지 높이 */
+  animation: slideRight 10s infinite; /* 애니메이션 적용 */
+}
+
+@keyframes slideRight {
+  0% {
+    left: -100%; /* 왼쪽 밖에서 시작 */
+  }
+  100% {
+    left: 100%; /* 다시 원래 위치로 돌아감 */
+  }
+}
+
+#slider-image {
+  width: 200px; /* 원하는 너비 */
+  height: auto; /* 원하는 높이 */
+  object-fit: cover; /* 이미지 비율 유지 및 자르기 */
+  transition: opacity 0.5s ease; /* 부드러운 페이드 효과 */
 }

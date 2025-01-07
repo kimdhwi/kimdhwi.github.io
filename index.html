@@ -6,35 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hyundai</title>
   <link rel="stylesheet" href="index.css">
-  <script src="index.js"></script> <!-- JavaScript 파일 연결 -->
+  <script defer src="index.js"></script> <!-- JavaScript를 defer로 로드 -->
 </head>
 
 <body>
   <div class="container">
+    <!-- 상단 영역 -->
     <div class="top">
       <div><img src="/img/img/logo.jpg" alt="Logo"></div>
       <div>
         <ul>
-          <li>견적</li>
-          <li>주문</li>
-          <li>문의</li>
+          <li id="login-link">로그인</li>
+          <li>회원가입</li>
+          <li>주문정보 조회</li>
         </ul>
       </div>
     </div>
 
+    <!-- 중앙 영역 -->
     <div class="content">
       <div class="left">
         <div class="button-container">
           <div class="container1">
-            <h2 class="text" id="text1">쉬운</h2>
+            <h2 class="text active" id="text1">쉬운</h2>
             <h2 class="text hidden" id="text2">결합</h2>
           </div>
-          <script src="index.js"></script>
-          <h3>신속하고 배송처리까지 완벽</h3>
+          <h2 class="h2">신속하고 배송처리까지 완벽</h2>
           <button class="arrow-button">견적 상담 신청</button>
           <button class="order-button">주문 신청</button>
         </div>
       </div>
+
       <div class="right">
         <div class="slider">
           <img src="/img/img/1.jpg" alt="Image 1" id="slider-image">
@@ -43,8 +45,8 @@
         </div>
       </div>
     </div>
-    
 
+    <!-- 하단 영역 -->
     <div class="bottom">
       <pre>
 성함 : 홍길동
@@ -52,6 +54,11 @@
 오시는길 : 울산광역시 남구
       </pre>
     </div>
+    <div class="slide-ba">
+      <img src="img/img/livart.jpg" alt="Logo" class="sliding-image">
+    </div>
+    
+  </div>
 </body>
 
 </html>

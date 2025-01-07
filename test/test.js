@@ -1,3 +1,4 @@
+// 쉬운 글자 애니메이션
 const text1 = document.getElementById("text1");
 const text2 = document.getElementById("text2");
 
@@ -42,3 +43,33 @@ function slideText() {
 
 // 2초마다 애니메이션 반복
 setInterval(slideText, 2000);
+
+// 이미지 슬라이더
+const images = ["/img/img/1.jpg", "/img/img/2.jpg"];
+let currentImageIndex = 0;
+
+function changeImage(direction) {
+  const imageElement = document.getElementById("slider-image");
+
+  imageElement.style.opacity = 0;
+
+  currentImageIndex += direction;
+
+  if (currentImageIndex < 0) {
+    currentImageIndex = images.length - 1;
+  } else if (currentImageIndex >= images.length) {
+    currentImageIndex = 0;
+  }
+
+  setTimeout(() => {
+    imageElement.src = images[currentImageIndex];
+    imageElement.style.opacity = 1;
+  }, 500);
+}
+
+
+
+document.getElementById("login-link").addEventListener("click", function () {
+  // 페이지 이동
+  window.location.href = "login.html"; // 로그인 페이지로 이동
+});
