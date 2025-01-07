@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hyundai</title>
   <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script> <!-- JavaScript 파일 연결 -->
 </head>
+
 <body>
   <div class="container">
     <div class="top">
-      <div><img src="" alt="Logo"></div>
+      <div><img src="/img/img/logo.jpg" alt="Logo"></div>
       <div>
         <ul>
           <li>견적</li>
@@ -21,12 +24,22 @@
 
     <div class="content">
       <div class="left">
-        <button>견적 시작</button>
+        <div class="button-container">
+          <h2>쉬운</h2>
+          <h3>신속하고 배송처리까지 완벽</h3>
+          <button class="arrow-button">견적 상담 신청</button>
+          <button class="order-button">주문 신청</button>
+        </div>
       </div>
       <div class="right">
-        <img src="" alt="Logo">
+        <div class="slider">
+          <img src="/img/img/1.jpg" alt="Image 1" id="slider-image">
+          <button class="button prev" onclick="changeImage(-1)">&#10094;</button>
+          <button class="button next" onclick="changeImage(1)">&#10095;</button>
+        </div>
       </div>
     </div>
+
 
     <div class="bottom">
       <pre>
@@ -36,4 +49,5 @@
       </pre>
     </div>
 </body>
+
 </html>
